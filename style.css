@@ -1,0 +1,12 @@
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 200px;
+}

@@ -64,6 +64,11 @@ const generateHead = () => {
   meta.addAttr('content', '1');
   head.addContent(meta);
 
+  const link = new Tag('link ', false);
+  link.addAttr('rel', 'stylesheet');
+  link.addAttr('href', 'style.css');
+  head.addContent(link);
+
   return head;
 }
 
@@ -104,7 +109,7 @@ const addLetters = () => {
   intervalId = setInterval(() => {
     const modifiedHtml = addName(html, name[index]);
     index++;
-    fs.writeFileSync('./name.html', modifiedHtml.toHTML(), 'utf8');
+    fs.writeFileSync('../name.html', modifiedHtml.toHTML(), 'utf8');
 
     if (index >= name.length) {
       clearInterval(intervalId);
@@ -113,4 +118,3 @@ const addLetters = () => {
 }
 
 addLetters();
-// console.log(generatePage());
